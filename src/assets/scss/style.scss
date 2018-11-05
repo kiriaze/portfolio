@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Graduate|Josefin+Sans|Teko');
+@import url('https://fonts.googleapis.com/css?family=Graduate');
 
 @import './mixins/style';
 @import './global/style';
@@ -143,27 +143,6 @@ a {
 		letter-spacing: -5vw;
 		color: rgba(0, 0, 0, 0.03);
 
-		// content: "89\'";
-		// font-size: 80vw;
-		// right: -10vw;
-		// top: 20vw;
-		// transform: rotate(-20deg);
-		
-		// // style 1
-		// font-family: 'Josefin Sans', sans-serif;
-		
-		// // style 2
-		// font-family: 'Graduate', cursive;
-		// letter-spacing: -13vw;
-		
-		// // style 3
-		// content: "1989";
-		// top: 30vw;
-		// right: -5vw;
-		// font-family: 'Teko', sans-serif;
-		
-
-		// style 4
 		content: "1989";
 		font-size: 35vw;
 		left: 0;
