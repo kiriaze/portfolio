@@ -16,6 +16,15 @@ import jQuery from 'jquery';
 
 // console.log('lorem');
 
+
+// check the time, and apply 'dark' if nighttime
+let hrs = (new Date).getHours();
+if ( hrs > 18 || hrs < 4 ) {
+	$('body').addClass('dark');
+} else {
+	$('body').removeClass('dark');
+}
+
 $('.toggle-day-night').on('click', (e) => {
 	e.preventDefault();
 	$('body').toggleClass('dark');
