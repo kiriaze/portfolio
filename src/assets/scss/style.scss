@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Graduate|Josefin+Sans|Teko');
+
+@import './mixins/style';
+@import './global/style';
+@import './patterns/style';
+
+// @import '../../views/globals/style';
+
+$ease-out-cubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
+small {
+	color: rgba(0, 0, 0, .5);
+	font-weight: 500;
+	font-size: 1.1rem;
+	letter-spacing: .15rem;
+}
+
+a {
+	text-decoration: none;
+	letter-spacing: 0.05rem;
+	color: rgba(0, 0, 0, .3);
+	transition: background .25s $ease-out-cubic, color .25s $ease-out-cubic;
+	&:hover {
+		color: white;
+		background: $offblack;
+	}
+}
+
+#main {
+	z-index: 0;
+	position: relative;
+}
+
+.toggle-day-night {
+	cursor: pointer;
+	margin-left: auto;
+	margin-top: -.2rem;
+
+	svg {
+		opacity: .3;
+		fill: $offblack;
+		width: 1.5rem;
+		display: inline-block;
+		vertical-align: middle;
+		transition: opacity .25s $ease-out-cubic;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	span:nth-child(2) {
+		display: none;
+	}
+}
+
+.dark {
+	// background: #191919;
+	a {
+		color: white;
+		&:hover {
+			color: black;
+			background-color: white;
+		}
+	}
+	.toggle-day-night {
+		svg {
+			fill: white;
+		}
+	}
+	.footer-list li:first-child a:hover {
+		color: black;
+		background-color: white;
+	}
+	.intro {
+		color: white;
+		background: #191919;
+		&:before {
+			color: rgba(255, 255, 255, 0.02);
+		}
+		h6 {
+			color: rgba(255, 255, 255, .3);
+		}
+		.clients li,
+		.clients a {
+			color: rgba(255, 255, 255, .3);
+			&:hover {
+				color: black;
+			}
+		}
+	}
+}
+
+.intro {
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+	background: white;
+	padding: 5vw 10vw;
+	border: 2rem solid #f5f5f5;
+	border: none;
+	transition: background .5s $ease-out-cubic;
+	> * {
+		width: 100%;
+	}
+	h1 {
+		line-height: 1;
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		letter-spacing: .3rem;
+		@include mq($screen-small) {
+			font-size: 2.8rem;
+			margin-bottom: 0;
+		}
+	}
+	h2 {
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		margin-bottom: 3.2rem;
+		letter-spacing: .2rem;
+		@include mq($screen-small) {
+			font-size: 1.6rem;
+			line-height: 3.2rem;
+		}
+	}
+	h2,
+	.lead,
+	small {
+		max-width: 76rem;
+	}
+	h6 {
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: 0.1rem;
+		color: rgba(0, 0, 0, .3);
+		transition: color .5s $ease-out-cubic;
+	}
+	&:before {
+		position: absolute;
+		z-index: -1;
+		letter-spacing: -5vw;
+		color: rgba(0, 0, 0, 0.03);
+
+		// content: "89\'";
+		// font-size: 80vw;
+		// right: -10vw;
+		// top: 20vw;
+		// transform: rotate(-20deg);
+		
+		// // style 1
+		// font-family: 'Josefin Sans', sans-serif;
+		
+		// // style 2
+		// font-family: 'Graduate', cursive;
+		// letter-spacing: -13vw;
+		
+		// // style 3
+		// content: "1989";
+		// top: 30vw;
+		// right: -5vw;
+		// font-family: 'Teko', sans-serif;
+		
+
+		// style 4
+		content: "1989";
+		font-size: 35vw;
+		left: 0;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		letter-spacing: -5vw;
+		text-indent: -3vw;
+		font-family: 'Graduate', cursive;
+	}
+}
+
+.lead {
+	font-weight: 300;
+	font-size: 1.8rem;
+	line-height: 3rem;
+	margin-bottom: 1.8rem;
+	@include mq($screen-small) {
+		font-weight: 300;
+		font-size: 2.6rem;
+		line-height: 3.6rem;
+		margin-bottom: 2.6rem;
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+
+.clients {
+	max-width: 75rem;
+	li {
+		display: inline-block;
+		font-weight: 500;
+		font-size: 1.2rem;
+		letter-spacing: .15rem;
+		transition: color .5s $ease-out-cubic;
+		&:after {
+			content: '•';
+			margin: 0 0.5rem;
+		}
+		&:last-child:after {
+			content: '';
+		}
+		a {
+			color: rgba(0, 0, 0, .5);
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+{# base.twig #}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Constantine Kiriaze - Software Engineer / Technology Consultant</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		{# <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> #}
+		
+		<meta name="description" content="Helping businesses solve problems in the digital landscape.">
+
+		<link rel="icon" href="{{ data.portPath }}/images/favicon.ico">
+
+		<meta name="robots" content="noindex, nofollow">
+
+		<meta property="og:image" content="">
+		<meta property="og:site_name" content="">
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="">
+		<meta property="og:title" content="">
+
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:creator" content="">
+		<meta name="twitter:url" content="">
+		<meta name="twitter:title" content="">
+		<meta name="twitter:description" content="">
+		<meta name="twitter:image:src" content="">
+
+		{% block head %}
+			{% if data.env == 'production' %}
+				<link rel="stylesheet" href="/{{ data.portPath }}/css/main.bundle.css?{{ data.timestamp }}">
+			{% endif %}
+		{% endblock %}
+		
+	</head>
+	<body class="" data-template="base.twig">
+
+		<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+		{% include 'assets/vectors/sprite.svg' with {
+			classes: 'display-none'
+		} %}
+
+		{% include 'views/globals/header/template.twig' %}
+
+		<main id="main">
+
+			{% block content %}{% endblock %}
+
+		</main>
+
+		{% include 'views/globals/footer/template.twig' %}
+
+		{% block foot %}
+
+			{% block beforeFoot %}{% endblock %}
+
+			<script src="{{ data.portPath }}/js/main.bundle.js?{{ data.timestamp }}"></script>
+			
+			{% block afterFoot %}{% endblock %}
+
+		{% endblock %}
+	
+	</body>
+</html>

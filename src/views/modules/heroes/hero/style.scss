@@ -1,0 +1,8 @@
+.hero {
+	display: block;
+	height: 20rem;
+	background: red;
+	@include mq($screen-small) {
+		background: blue;
+	}
+}
