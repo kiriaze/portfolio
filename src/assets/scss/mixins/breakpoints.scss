@@ -1,19 +1,22 @@
 $breakpoints: () !default;
 
-@mixin mq($size, $type: min, $orientation: width) {
+@mixin mq($size, $type: min, $wh: width, $orientation: null) {
 	@if map_has_key($breakpoints, $size) {
 		$size: map_get($breakpoints, $size);
 	}
 	@if $type == max {
 		$size: $size - 1px;
 	}
-	@if $orientation == width {
-		@media only screen and (#{$type}-width: $size) {
+	@if $orientation {
+		$orientation: 'and (orientation: #{$orientation}) and (-webkit-min-device-pixel-ratio: 2)';
+	}
+	@if $wh == width {
+		@media only screen and (#{$type}-width: $size) #{$orientation} {
 			@content;
 		}
 	}
-	@if $orientation == height {
-		@media only screen and (#{$type}-height: $size) {
+	@if $wh == height {
+		@media only screen and (#{$type}-height: $size) #{$orientation} {
 			@content;
 		}
 	}

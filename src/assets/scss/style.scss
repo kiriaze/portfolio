@@ -26,16 +26,27 @@ a {
 	}
 }
 
+body {
+	background-color: transparent;
+	transition: background .5s $ease-out-cubic;
+}
+
 #main {
 	z-index: 0;
 	position: relative;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	padding: 0 10vw;
 }
 
 .toggle-day-night {
 	cursor: pointer;
-	margin-left: auto;
-	margin-top: -.2rem;
-
+	margin: 0 0 1.5rem 0;
+	@include mq($screen-small) {
+		margin: -.1rem 1.5rem 0 0;
+	}
 	svg {
 		opacity: .3;
 		fill: $offblack;
@@ -53,7 +64,7 @@ a {
 }
 
 .dark {
-	// background: #191919;
+	background: #191919;
 	a {
 		color: white;
 		&:hover {
@@ -72,7 +83,7 @@ a {
 	}
 	.intro {
 		color: white;
-		background: #191919;
+		// background: #191919;
 		&:before {
 			color: rgba(255, 255, 255, 0.02);
 		}
@@ -91,16 +102,24 @@ a {
 
 .intro {
 	display: flex;
-	min-height: 100vh;
+	flex: 0;
+	margin: 0 0 2rem 0;
+	@include mq($screen-medium, 'max', 'width', 'portrait') {
+		flex: 2;
+		margin: 5rem 0 0;
+	}
+	@include mq($screen-medium, 'max', 'width', 'landscape') {
+		flex: 2;
+		margin: 5rem 0 0;
+	}
 	align-items: center;
 	position: relative;
 	overflow: hidden;
 	z-index: 10;
-	background: white;
-	padding: 5vw 10vw;
+	// background-color: transparent;
 	border: 2rem solid #f5f5f5;
 	border: none;
-	transition: background .5s $ease-out-cubic;
+	// transition: background .5s $ease-out-cubic;
 	> * {
 		width: 100%;
 	}
@@ -120,7 +139,7 @@ a {
 		line-height: 1.8rem;
 		margin-bottom: 3.2rem;
 		letter-spacing: .2rem;
-		@include mq($screen-small) {
+		@include mq($screen-medium) {
 			font-size: 1.6rem;
 			line-height: 3.2rem;
 		}
@@ -161,7 +180,7 @@ a {
 	font-size: 1.8rem;
 	line-height: 3rem;
 	margin-bottom: 1.8rem;
-	@include mq($screen-small) {
+	@include mq($screen-medium) {
 		font-weight: 300;
 		font-size: 2.6rem;
 		line-height: 3.6rem;

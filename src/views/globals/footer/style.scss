@@ -1,33 +1,32 @@
 // @import './mixins/style';
 
 #footer {
-	position: absolute;
-	bottom: 5rem;
+	// position: absolute;
+	// bottom: 5rem;
 	z-index: 10;
 	left: 0;
 	right: 0;
 	display: flex;
-	padding: 0 10vw;
-	.footer-list {
-		flex-flow: column wrap;
-	}
+	// padding: 0 10vw;
+	margin: 0 0 4rem 0;
 	@include mq($screen-small) {
-		.footer-list {
-			flex-flow: row wrap;
-		}
+		margin: 4rem 0;
 	}
 }
 
 .footer-list {
 	width: 100%;
 	display: flex;
-	margin-top: 4rem;
+	flex-flow: column wrap;
+	@include mq($screen-small) {
+		flex-flow: row wrap;
+	}
 	@include mq($screen-medium) {
 		margin: 0;
 		bottom: 4rem;
 		// position: absolute;
 	}
-	li {
+	li:not(.toggle-day-night) {
 		margin-right: 1.5rem;
 		margin-bottom: 1rem;
 		@include mq($screen-small) {
@@ -50,7 +49,7 @@
 			}
 		}
 	}
-	li:first-child a {
+	li:nth-child(2) a {
 		color: rgba(0, 0, 0, 1);
 		background: $yellow;
 		padding: .2rem .5rem;
