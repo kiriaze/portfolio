@@ -2,6 +2,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		{# might not need google analytics, must suffice with just  google tag manager #}
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		{# <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65559123-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-65559123-1');
+		</script> #}
+		{# end google analytics #}
+		
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-K36HGGH');</script>
+		<!-- End Google Tag Manager -->
+
 		<title>Constantine Kiriaze - Software Engineer / Technology Consultant</title>
 
 		<meta charset="utf-8">
@@ -11,9 +31,18 @@
 		
 		<meta name="description" content="Helping businesses solve problems in the digital landscape.">
 
+		<meta itemprop="name" content="Constantine Kiriaze — Software Engineer / Technology Consultant">
+		<meta itemprop="description" content="Helping businesses solve problems in the digital landscape.">
+		
+		{# 
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ data.portPath }}/images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ data.portPath }}/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ data.portPath }}/images/favicon/favicon-16x16.png">
+		#}
 		<link rel="icon" href="{{ data.portPath }}/images/favicon.ico">
 
-		<meta name="robots" content="noindex, nofollow">
+		{# <meta name="robots" content="noindex, nofollow"> #}
+		<link rel="canonical" href="/">
 
 		<meta property="og:image" content="">
 		<meta property="og:site_name" content="">
@@ -38,6 +67,11 @@
 	<body class="" data-template="base.twig">
 
 		<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K36HGGH"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 
 		{% include 'assets/vectors/sprite.svg' with {
 			classes: 'display-none'

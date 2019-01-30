@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Graduate');
+// @import url('https://fonts.googleapis.com/css?family=Graduate');
 
 @import './mixins/style';
 @import './global/style';
@@ -192,7 +192,7 @@ body {
 }
 
 .clients {
-	max-width: 75rem;
+	// max-width: 75rem;
 	li {
 		display: inline-block;
 		font-weight: 500;
