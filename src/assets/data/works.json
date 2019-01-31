@@ -1,0 +1,144 @@
+[
+    {
+      "name": "FILA",
+      "status": "completed",
+      "url": "https://fila.com/",
+      "image": [
+        "/assets/images/projects/fila-5.jpg",
+        "/assets/images/projects/fila-3.jpg",
+        "/assets/images/projects/fila-4.jpg",
+        "/assets/images/projects/fila.webp",
+        "/assets/images/projects/fila.gif"
+      ]
+    },
+    {
+      "name": "Google",
+      "status": "completed",
+      "url": "https://store.google.com/",
+      "image": "/assets/images/projects/google.jpg"
+    },
+    {
+      "name": "Beats By DRE",
+      "year": "2016",
+      "status": "completed",
+      "url": "https://www.beatsbydre.com/",
+      "image": [
+        "/assets/images/projects/beats-by-dre-1.jpg",
+        "/assets/images/projects/beats-by-dre-2.jpg"
+      ],
+      "video": "/assets/video/beats-by-dre.mp4"
+    },
+    {
+      "name": "CHROME Industries",
+      "status": "completed",
+      "url": "https://www.chromeindustries.com/",
+      "image": "/assets/images/projects/chrome.jpg",
+      "video": "/assets/video/chrome.mp4"
+    },
+    {
+      "name": "Heath Ceramics",
+      "status": "completed",
+      "url": "https://www.heathceramics.com/",
+      "image": [
+        "/assets/images/projects/heath-2.jpg",
+        "/assets/images/projects/heath.jpg"
+      ]
+    },
+    {
+      "name": "KEEN",
+      "status": "completed",
+      "url": "https://www.keenfootwear.com/",
+      "image": "/assets/images/projects/keen.jpg",
+      "video": "/assets/video/keen.mp4"
+    },
+    {
+      "name": "BBDakota",
+      "status": "completed",
+      "url": "https://bbdakota.com/",
+      "image": [
+        "/assets/images/projects/bbdakota.jpg",
+        "/assets/images/projects/bbdakota-2.jpg"
+      ],
+      "video": [
+        "/assets/video/bbdakota.mp4",
+        "/assets/video/bbdakota-2.mp4",
+        "/assets/video/bbdakota-3.mp4",
+        "/assets/video/bbdakota-4.mp4"
+      ]
+    },
+    {
+      "name": "Volcom",
+      "year": "2015",
+      "status": "completed",
+      "url": "https://volcom.com/",
+      "image": [
+        "/assets/images/projects/volcom.jpg",
+        "/assets/images/projects/volcom-2.jpg"
+      ],
+      "video": "/assets/video/volcom.mp4"
+    },
+    {
+      "name": "Billabong",
+      "year": "2015",
+      "status": "completed",
+      "url": "https://billabong.com/",
+      "image": [
+        "/assets/images/projects/billabong-4.jpg",
+        "/assets/images/projects/billabong-5.jpg",
+        "/assets/images/projects/billabong-6.jpg",
+        "/assets/images/projects/billabong-7.jpg",
+        "/assets/images/projects/billabong-11.jpg",
+        "/assets/images/projects/billabong-12.jpg"
+      ]
+    },
+    {
+      "name": "STOKE",
+      "status": "completed",
+      "url": "https://www.stokecertified.com/",
+      "image": "/assets/images/projects/p13.jpg"
+    },
+    {
+      "name": "EQ Culture",
+      "status": "completed",
+      "url": "https://vimeo.com/eqstudios",
+      "image": "/assets/images/projects/p19.png",
+      "video": "/assets/video/eq-promo.mp4"
+    },
+    {
+      "name": "Nutanix",
+      "status": "hidden",
+      "url": "/work/nutanix/",
+      "image": "/assets/images/projects/p6.jpg",
+      "video": "/assets/video/nutanix.mp4"
+    },
+    {
+      "name": "Andy Davis",
+      "status": "hidden",
+      "url": "/work/andy-davis/",
+      "image": "/assets/images/projects/p23.jpg"
+    },
+    {
+      "name": "CAKE",
+      "status": "hidden",
+      "url": "https://getcake.com",
+      "image": "/assets/images/projects/p23.jpg"
+    },
+    {
+      "name": "National MS Society",
+      "status": "hidden",
+      "url": "https://nationalmssociety.org",
+      "image": "/assets/images/projects/p23.jpg"
+    },
+    {
+      "name": "Liberty in North Korea",
+      "status": "hidden",
+      "url": "https://libertyinnorthkorea.org",
+      "image": "/assets/images/projects/p23.jpg"
+    },
+    {
+      "name": "Donately",
+      "status": "hidden",
+      "url": "https://donately.com",
+      "image": "/assets/images/projects/p23.jpg"
+    }
+  ]

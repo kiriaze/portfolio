@@ -20,7 +20,6 @@
 		ios
 		email
 		demandware/magento
-
 	#}
 
 	<section class="intro">
@@ -42,30 +41,31 @@
 			
 			<h6>Trusted by</h6>
 
-			<ul class="clients">
-				<li><a target="new" href="https://www.fila.com/">FILA</a></li>
-				<li><a target="new" href="https://store.google.com/">Google</a></li>
-				<li><a target="new" href="https://www.beatsbydre.com/">BeatsByDre</a></li>
-				<li><a target="new" href="https://www.chromeindustries.com/">CHROME Industries</a></li>
-				<li><a target="new" href="https://www.heathceramics.com/">Heath Ceramics</a></li>
-				<li><a target="new" href="https://www.keenfootwear.com/">KEEN Footwear</a></li>
-				<li><a target="new" href="https://bbdakota.com/">BBDakota</a></li>
-				<li><a target="new" href="https://www.volcom.com/">Volcom</a></li>
-				<li><a target="new" href="https://www.billabong.com/">Billabong</a></li>
-				<!-- 
-				<li><a href="javascript:;">DreamAgain</a></li>
-				<li><a href="javascript:;">Invisible Children</a></li>
-				<li><a href="javascript:;">StickyBumps</a></li>
-				<li><a href="javascript:;">STOKE Certified</a></li>
-				<li><a href="javascript:;">Artists for Peace & Justice</a></li>
-				<li><a href="javascript:;">Andy Davis</a></li>
-				<li><a href="javascript:;">Nutanix</a></li>
-				<li><a href="javascript:;">Schmidt Design Group</a></li>
-				<li><a href="javascript:;">CAKE</a></li>
-				<li><a href="javascript:;">National MS Society</a></li>
-				<li><a href="javascript:;">Liberty in North Korea</a></li>
-				<li><a href="javascript:;">Donately</a></li>
-				<li><a href="javascript:;">EQ Culture</a></li> -->
+			<ul class="clients work-title-list">
+				
+				{% for work in data['works'] %}
+
+					{% if work.status != 'hidden' %}
+
+					{% set imgLength = (work.image is iterable) ? work.image | length - 1 : 0 %}
+					{% set vidLength = (work.video is iterable) ? work.video | length - 1 : 0 %}
+					{% set image     = imgLength > 0 ? work.image[random(imgLength)] : work.image %}
+					{% set video     = vidLength > 0 ? work.video[random(vidLength)] : work.video %}
+
+					<li>
+						<a href="{{work.url}}" target="new" class="{{ work.status }}">{{ work.name }}</a>
+						{% if work.video %}
+							<video class="work-title-bg work-title-video" poster="{{ image }}" autoplay loop muted preload="auto">
+								<source src="{{ video }}" type="video/mp4">
+							</video>
+						{% else %}
+							<div class="work-title-bg" style="background-image:url({{ image }})"></div>
+						{% endif %}
+					</li>
+
+					{% endif %}
+
+				{% endfor %}
 				
 			</ul>
 

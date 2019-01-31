@@ -114,7 +114,7 @@ body {
 	}
 	align-items: center;
 	position: relative;
-	overflow: hidden;
+	// overflow: hidden;
 	z-index: 10;
 	// background-color: transparent;
 	border: 2rem solid #f5f5f5;
@@ -192,11 +192,13 @@ body {
 }
 
 .clients {
-	// max-width: 75rem;
+	max-width: 75rem;
 	li {
 		display: inline-block;
+		vertical-align: top;
 		font-weight: 500;
 		font-size: 1.2rem;
+		line-height: 2rem;
 		letter-spacing: .15rem;
 		transition: color .5s $ease-out-cubic;
 		&:after {
@@ -215,12 +217,55 @@ body {
 	}
 }
 
+.work-title-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	z-index: -1;
+	background-size: cover;
+	background-position: center;
+	transition: opacity .35s $ease-out-cubic;
+	&.work-title-video {
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+	}
+}
 
+.work-title-list {
+	background-size: cover;
+	overflow: hidden;
 
+	a {
+		position: relative;
+		z-index: 1;
 
+		cursor: default;
+		pointer-events: none;
 
+		// completed projects
+		&.completed {
+			text-decoration: underline;
+			cursor: pointer;
+			pointer-events: auto;
+		}
 
+		&:hover {
 
+			&.completed {
+				& + .work-title-bg {
+					// opacity: 1;
+					opacity: 0.3;
+					&.work-title-video {
+						opacity: 0.3;
+					}
+				}
+			}
 
+		}
 
-
+	}
+}

@@ -50,3 +50,16 @@ $('#header a').on('click', (e) => {
 	$('#main').load(`${href} #main`);
 
 });
+
+// video play/pause hovers
+$(".work-title-list a").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {  
+	if ( $(this).siblings('.work-title-video').length )
+	$(this).siblings('.work-title-video').get(0).play(); 
+}
+
+function hideVideo(e) {
+	if ( $(this).siblings('.work-title-video').length )
+	$(this).siblings('.work-title-video').get(0).pause(); 
+}
