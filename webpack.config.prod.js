@@ -135,6 +135,10 @@ const config = {
 				to: 'assets/images/'
 			},
 			{
+				from: 'assets/video/',
+				to: 'assets/video/'
+			},
+			{
 				from: 'assets/vectors/',
 				to: 'assets/vectors/'
 			},
