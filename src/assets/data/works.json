@@ -4,11 +4,11 @@
       "status": "completed",
       "url": "https://www.fila.com/",
       "image": [
-        "/assets/images/projects/fila-5.jpg",
+        "/assets/images/projects/fila.gif",
         "/assets/images/projects/fila-3.jpg",
-        "/assets/images/projects/fila-4.jpg",
+        "/assets/images/projects/fila-5.jpg",
         "/assets/images/projects/fila.webp",
-        "/assets/images/projects/fila.gif"
+        "/assets/images/projects/fila-4.jpg"
       ]
     },
     {
@@ -40,8 +40,8 @@
       "status": "completed",
       "url": "https://www.heathceramics.com/",
       "image": [
-        "/assets/images/projects/heath-2.jpg",
-        "/assets/images/projects/heath.jpg"
+        "/assets/images/projects/heath.jpg",
+        "/assets/images/projects/heath-2.jpg"
       ]
     },
     {
@@ -78,20 +78,6 @@
       "video": "/assets/video/volcom.mp4"
     },
     {
-      "name": "Billabong",
-      "year": "2015",
-      "status": "completed",
-      "url": "https://billabong.com/",
-      "image": [
-        "/assets/images/projects/billabong-4.jpg",
-        "/assets/images/projects/billabong-5.jpg",
-        "/assets/images/projects/billabong-6.jpg",
-        "/assets/images/projects/billabong-7.jpg",
-        "/assets/images/projects/billabong-11.jpg",
-        "/assets/images/projects/billabong-12.jpg"
-      ]
-    },
-    {
       "name": "STOKE",
       "status": "completed",
       "url": "https://www.stokecertified.com/",
@@ -103,6 +89,20 @@
       "url": "https://vimeo.com/eqstudios",
       "image": "/assets/images/projects/p19.png",
       "video": "/assets/video/eq-promo.mp4"
+    },
+    {
+      "name": "Billabong",
+      "year": "2015",
+      "status": "completed",
+      "url": "https://billabong.com/",
+      "image": [
+        "/assets/images/projects/billabong-6.jpg",
+        "/assets/images/projects/billabong-12.jpg",
+        "/assets/images/projects/billabong-11.jpg",
+        "/assets/images/projects/billabong-5.jpg",
+        "/assets/images/projects/billabong-7.jpg",
+        "/assets/images/projects/billabong-4.jpg"
+      ]
     },
     {
       "name": "Nutanix",

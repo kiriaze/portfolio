@@ -26,7 +26,8 @@
 
 		<div class="centered">
 
-			<h2>Software Engineer. Web Sommelier. Digital Sous-Chef.</h2>
+			<h2>Software Engineer. Web Sommelier. Digital Chef.</h2>
+			<!-- <h2>Software Engineer. Web Sommelier. Digital Sous-Chef.</h2> -->
 
 			<p class="lead">
 				Yo! I'm Constantine Kiriaze, fam calls me CK.
@@ -50,7 +51,9 @@
 					{% set imgLength = (work.image is iterable) ? work.image | length - 1 : 0 %}
 					{% set vidLength = (work.video is iterable) ? work.video | length - 1 : 0 %}
 					{% set image     = imgLength > 0 ? work.image[random(imgLength)] : work.image %}
+					{% set image     = imgLength > 0 ? work.image[0] : work.image %}
 					{% set video     = vidLength > 0 ? work.video[random(vidLength)] : work.video %}
+					{% set video     = vidLength > 0 ? work.video[0] : work.video %}
 
 					<li>
 						<a href="{{work.url}}" target="new" class="{{ work.status }}">{{ work.name }}</a>
